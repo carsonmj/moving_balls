@@ -34,3 +34,15 @@ interface IStore {
   actors: IBall[];
   update: () => IStore;
 }
+
+interface ICanvasSize {
+  width: number;
+  height: number;
+}
+
+interface GetRandomVelocityProps {
+  position: Coordinate;
+  pixel: number[];
+  maxRadius: number;
+  canvasSize: ICanvasSize;
+}
