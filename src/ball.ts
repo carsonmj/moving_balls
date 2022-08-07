@@ -46,7 +46,7 @@ export class Ball {
         continue;
       }
 
-      const distance = this.position.subtract(actor.position).magnitude;
+      const distance = this.position.add(this.velocity).subtract(actor.position.add(actor.velocity)).magnitude;
 
       if (distance <= this.radius + actor.radius) {
         this.velocity = new Position(this.velocity.x * -1, this.velocity.y * -1);
