@@ -72,7 +72,7 @@ const getXVelocity = (props: XVelocityProps): number => {
     x = getRandomNumber([Math.sqrt(min), Math.sqrt(max)]);
   }
 
-  return x * sign;
+  return Number((x * sign).toFixed(4));
 };
 
 const getYVelocity = (props: YVelocityProps): number => {
@@ -92,7 +92,7 @@ const getYVelocity = (props: YVelocityProps): number => {
     y = radiusAddedY < 0 ? maxRadius : y;
   }
 
-  return getRandomNumber([range.min, range.max]);
+  return Number(getRandomNumber([range.min, range.max]).toFixed(4));
 };
 
 export const getRandomVelocity = (
